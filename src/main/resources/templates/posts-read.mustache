@@ -1,0 +1,29 @@
+{{>layout/header}}
+<div class="container">
+    <div class="col-md-12">
+        <div class="col-md-4">
+            <form>
+                <div class="form-group">
+                    <label for="id">글 번호 {{post.id}}</label>
+                </div>
+                <div class="form-group">
+                    <label for="title">제목 {{post.title}}</label>
+                </div>
+                <div class="form-group">
+                    <label for="author">작성자 {{post.author}}</label>
+                </div>
+                <div class="form-group">
+                    <label for="content">내용</label>
+                    <label id="content">{{post.content}}</label>
+                </div>
+            </form>
+            <a href="/" role="button" class="btn btn-secondary">목록으로</a>
+            {{#writer}}
+                <a href="/posts/update/{{post.id}}" role="button" class="btn btn-secondary">수정하기</a>
+            {{/writer}}
+<!--            작성자라면 수정하기 표시-->
+
+        </div>
+    </div>
+</div>
+{{>layout/footer}}
